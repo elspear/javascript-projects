@@ -15,7 +15,22 @@
         <div id="wrapper">
             <p id="number">0</p>
             <div id="button-wrapper">
+                <input type="button" value="+1" id="addition" onclick="add(1)" />
+                <input type="button" value="+10" id="addition" onclick="add(10)" />
+                <input type="button" value="-1" id="subtraction" onclick="subtract(1)" />
+                <input type="button" value="-10" id="subtraction" onclick="subtract(10)" />
+
+                <div id="custom-input-wrapper">
+                    <input type="number" id="customNumber" placeholder=""Enter number:" min="1" />
+                    <input type="button" value="+" onclick="addCustom()" />
+                    <input type="button" value="-" onclick="subtractCustom()" />
+                </div>
+
+                <div id="reset-wrapper">
+                    <input type="button" value="Reset" id="reset" onclick="reset()" /> 
+                </div>
             </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
