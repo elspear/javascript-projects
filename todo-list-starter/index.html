@@ -1,28 +1,43 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Todo List</title>
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="styles.css">
     </head>
-
     <body>
-        <h1>My Todo List</h1>
-        <ul id="todo-list"></ul>
-        <div id="new-task-input">
-            <input id="new-task-text" type="text" placeholder="Todo task" />
-            <input
-                id="new-task-button"
+        <div class="container">
+            <div class="todo-header">
+                <h2>ToDo List</h2>
+            </div>
+            <div class="todo-body">
+                <input
+                id="new-task-text"
+                type="text"
+                placeholder="add your task"
+                />
+                <button 
+                id="calendar-btn"
+                class="calendar-button"
                 type="button"
-                value="Submit"
+                onclick="openDatePicker()"
+                >📅</button>
+                <input
+                id="new-task-date"
+                type="date"
+                class="hidden-date-input"
+                />
+                <img
+                src="plus.png"
+                alt="+"
+                id="add-task"
                 onclick="addTask()"
-            />
+                />
+            </div>
+            <ul id="todo-list"></ul>
         </div>
+        
         <script src="script.js"></script>
     </body>
 </html>
